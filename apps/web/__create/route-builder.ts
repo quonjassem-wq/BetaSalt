@@ -132,7 +132,18 @@ async function registerRoutes() {
 }
 
 // Initial route registration
-await registerRoutes();
+async function start() {
+  await registerRoutes();
+
+  const index = await createHonoServer({
+    app,
+    defaultLogger: false,
+  });
+
+  return index;
+}
+
+export default start();
 
 // Hot reload routes in development
 if (import.meta.env.DEV) {
