@@ -3,8 +3,6 @@
  * from DOM elements.
  */
 
-import { type GetStyleInfo, initDesignMode } from '../../../../shared/design-mode';
-
 // Registers the <hex-color-picker> custom element used by the design toolbar's
 // background-color dropdown. Loaded conditionally because the package executes
 // `customElements.define()` at module-eval time, which crashes during SSR.
